@@ -59,3 +59,32 @@ export function cleanCache(){
 }
 
 }
+
+export function order(value){
+    return function (dispatch){
+        return dispatch({
+            type: "GET_ORDER",
+            payload: value
+        })
+    }
+}
+ export function setPage(num){
+    return function(dispatch){
+        return dispatch({
+            type: "SET_PAGE",
+            payload: num
+        })
+    }
+ }
+
+ export function searchName(name){
+    return function (dispatch){
+        return dispatch({
+            type:"SEARCH_NAME",
+            payload: name
+        })
+    }
+ }
+
+
+ 

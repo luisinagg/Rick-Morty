@@ -8,6 +8,9 @@ import Paged from './Paged';
 import { useState } from 'react';
 import styles from './css/Home.module.css';
 import { Link } from 'react-router-dom';
+import Order from './Order';
+import SearchBar from './SearchBar';
+
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -37,11 +40,18 @@ export default function Home() {
         setCharactersXPage(e.target.value)
     }
 
+    const [order, setOrder] = useState();
+    //me creo el estado local para renderizar los cambios
+
 
   return (
     <div>
-        <NavBar/>
-        <h1>Home</h1>
+        <div><NavBar/></div>
+        <div><SearchBar/></div>
+        <div>
+            <Order setOrder= {setOrder}/>
+        </div>
+       
         {/* <label>PAGINAS</label>
         <input type = "range" max="40" onChange={(e)=>handleChangeRange(e)} /> */}
         <label htmlFor=""></label>

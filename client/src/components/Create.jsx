@@ -83,7 +83,7 @@ export default function Create() {
             <option value ="default">Select Episode</option>
             {
               allEpisodes?.map(cur =>{
-                return <option key = {cur.id+Math.random()*1000} value={cur.id}>{cur.name}</option>
+                return <option key = {cur.id} value={cur.id}>{cur.name}</option>
               })
             }
 
